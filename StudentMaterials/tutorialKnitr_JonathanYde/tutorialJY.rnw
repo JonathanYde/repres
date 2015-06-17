@@ -1,0 +1,17 @@
+\documentclass{article}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+I will explore the dataset \textbf{mpg} by doing general plots:
+
+<<Cars1, fig=TRUE>>=
+library(ggplot2)
+data("mpg")
+head("mpg")
+ggplot(mpg,aes(x=displ, y=hwy, colour=cty))+geom_point()+ scale_colour_gradientn(colours = topo.colors(10))
+@
+
+This is the end.
+
+\end{document}

@@ -1,0 +1,26 @@
+\documentclass{article}
+
+\usepackage{Sweave}
+\begin{document}
+\input{tutorialJY-concordance}
+
+I will explore the dataset \textbf{mpg} by doing general plots:
+
+\begin{Schunk}
+\begin{Sinput}
+> library(ggplot2)
+> data("mpg")
+> head("mpg")
+\end{Sinput}
+\begin{Soutput}
+[1] "mpg"
+\end{Soutput}
+\begin{Sinput}
+> ggplot(mpg,aes(x=displ, y=hwy, colour=cty))+geom_point()+ scale_colour_gradientn(colours = topo.colors(10))
+\end{Sinput}
+\end{Schunk}
+\includegraphics{tutorialJY-Cars1}
+
+This is the end.
+
+\end{document}
