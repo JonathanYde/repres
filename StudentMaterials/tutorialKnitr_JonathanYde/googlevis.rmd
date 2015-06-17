@@ -1,0 +1,50 @@
+---
+title: "Untitled"
+author: "JonathanYde"
+date: "17. jun. 2015"
+output: slidy_presentation
+---
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with code
+
+This is a GoogleVis plot:
+
+```{r libraries, echo=FALSE, message=FALSE}
+library(ggplot2)
+library(googleVis)
+library(datasets)
+suppressPackageStartupMessages(library(googleVis))
+op <- options(gvis.plot.tag="chart")
+```
+
+```{r}
+data(mpg)
+head(mpg)
+```
+
+## Slide with code
+```{r Bubbledata}
+chart <- gvisBubbleChart(mpg, idvar="manufacturer",
+  xvar="cty",
+  yvar="hwy",
+  colorvar="year",
+  sizevar="class",
+  options=list(
+                            hAxis="{title:'Cty'}",
+                            vAxis="{title:'Hwy'}",
+                            width=900,
+                            height=600
+  )
+)
+```
+
+## Slide with graph
+```{r plotBubble, results='asis', echo=FALSE, message=FALSE}
+print(chart, "chart")
+```
