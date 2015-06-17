@@ -21,6 +21,21 @@ I will explore the dataset \textbf{mpg} by doing general plots:
 \end{Schunk}
 \includegraphics{tutorialJY-Cars1}
 
+\begin{Schunk}
+\begin{Sinput}
+> library(ggplot2)
+> data("mpg")
+> head("mpg")
+\end{Sinput}
+\begin{Soutput}
+[1] "mpg"
+\end{Soutput}
+\begin{Sinput}
+> ggplot(mpg,aes(x=displ, y=hwy, colour=drv))+geom_point()+ scale_colour_hue()
+\end{Sinput}
+\end{Schunk}
+\includegraphics{tutorialJY-Cars2}
+
 This is the end.
 
 \end{document}
