@@ -25,6 +25,8 @@ data("mpg")
 head("mpg")
 ggplot(mpg,aes(x=hwy, y=cty, colour=displ))+geom_point()+ scale_colour_gradientn(colours = topo.colors(10))
 @
-This is the end.
+This is the end of ggplots.
+
+
 
 \end{document}
