@@ -9,7 +9,7 @@ library(datasets)
 shinyUI(fluidPage(
   
   # Application title
-  titlePanel("Fruits Sales over Three Years"),
+  titlePanel("Car engines over the years"),
   
   p("This is a more complex layout realised with fluidrows instead of sidepanels"),
   br(),
