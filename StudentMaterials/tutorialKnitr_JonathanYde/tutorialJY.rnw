@@ -19,6 +19,12 @@ head("mpg")
 ggplot(mpg,aes(x=displ, y=hwy, colour=drv))+geom_point()+ scale_colour_hue()
 @
 
+<<Cars3, fig=TRUE>>=
+library(ggplot2)
+data("mpg")
+head("mpg")
+ggplot(mpg,aes(x=hwy, y=cty, colour=displ))+geom_point()+ scale_colour_gradientn(colours = topo.colors(10))
+@
 This is the end.
 
 \end{document}

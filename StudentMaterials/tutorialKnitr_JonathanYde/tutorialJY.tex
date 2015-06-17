@@ -36,6 +36,20 @@ I will explore the dataset \textbf{mpg} by doing general plots:
 \end{Schunk}
 \includegraphics{tutorialJY-Cars2}
 
+\begin{Schunk}
+\begin{Sinput}
+> library(ggplot2)
+> data("mpg")
+> head("mpg")
+\end{Sinput}
+\begin{Soutput}
+[1] "mpg"
+\end{Soutput}
+\begin{Sinput}
+> ggplot(mpg,aes(x=hwy, y=cty, colour=displ))+geom_point()+ scale_colour_gradientn(colours = topo.colors(10))
+\end{Sinput}
+\end{Schunk}
+\includegraphics{tutorialJY-Cars3}
 This is the end.
 
 \end{document}
